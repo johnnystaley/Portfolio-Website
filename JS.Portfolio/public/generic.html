@@ -1,0 +1,132 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Johnny Staley - Resume</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Johnny Staley</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">Home</a></li>
+							<li class="active"><a href="generic.html">Resume</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="#" class="icon brands alt fa-linkedin"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<h1>My Resume</h1>
+									<p>Aenean ornare velit lacus varius enim ullamcorper proin aliquam<br />
+									facilisis ante sed etiam magna interdum congue. Lorem ipsum dolor<br />
+									amet nullam sed etiam veroeros.</p>
+									<div id="adobe-dc-view" style="width: 800px;"></div>
+								</header>
+								<div class="image main"><img src="images/cincinnati.jpg" alt="" /></div>
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						</section>
+						<section class="split contact">
+							<section class="alt">
+							</section>
+							<section>
+								<h3>Email</h3>
+								<p><a href="#">johnnystaley.io@gmail.com</a></p>
+							</section>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+									<li><a href="#" class="icon brands alt fa-linkedin"><span class="label">Instagram</span></a></li>
+									<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+			<script type="text/javascript">
+				document.addEventListener('adobe_dc_view_sdk.ready', function () {
+				var adobeDCView = new AdobeDC.View({
+					clientId: 'bc1qre8jdw2azrg6tf49wmp652w00xltddxmpk98xp',
+					divId: 'adobe-dc-view',
+				});
+				adobeDCView.previewFile(
+					{
+					content: { location: { url: 'images/resume.pdf' } },
+					metaData: { fileName: 'Resume' },
+					},
+					{
+					embedMode: 'IN_LINE',
+					showDownloadPDF: false,
+					showPrintPDF: false,
+					}
+				);
+				});
+			</script>
+			<script type="module">
+				// Import the functions you need from the SDKs you need
+				import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
+				import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-analytics.js";
+				// TODO: Add SDKs for Firebase products that you want to use
+				// https://firebase.google.com/docs/web/setup#available-libraries
+			  
+				// Your web app's Firebase configuration
+				// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+				const firebaseConfig = {
+				  apiKey: "AIzaSyAuc6hg3vpGs5KEzNDvz3pzyRZc2OO2YqM",
+				  authDomain: "johnnystaley-fa474.firebaseapp.com",
+				  projectId: "johnnystaley-fa474",
+				  storageBucket: "johnnystaley-fa474.appspot.com",
+				  messagingSenderId: "155092197498",
+				  appId: "1:155092197498:web:0d4b69f8674052227b5bc3",
+				  measurementId: "G-VS79MV4TFM"
+				};
+			  
+				// Initialize Firebase
+				const app = initializeApp(firebaseConfig);
+				const analytics = getAnalytics(app);
+			  </script>
+	</body>
+</html>
