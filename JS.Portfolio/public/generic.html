@@ -6,6 +6,16 @@
 -->
 <html>
 	<head>
+		<link
+			href="images/js_norm.png"
+			rel="icon"
+			media="(prefers-color-scheme: light)"
+		/>
+		<link
+			href="images/js_dm.png"
+			rel="icon"
+			media="(prefers-color-scheme: dark)"
+		/>
 		<title>Johnny Staley - Resume</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -31,25 +41,22 @@
 					</nav>
 				<!-- Main -->
 					<div id="main">
-
 						<!-- Post -->
-							<section class="post">
-								<header class="major">
-									<h1>Resume</h1>
-									<p>Below you'll find my resume which should present a brief summary of my knowledge, skills, and experience.<br />
-									I offer industrial-organizational expertise, a strong aptitude for learning new concepts and technologies, and a proven track record of exceptional performance. <br />
-									I believe that my knowledge as an I/O psychologist and my passion for understanding human behavior makes me the ideal candidate to meet your organizational needs. Thank you for your time and interest.</p>
-									<div id="adobe-dc-view" style="width: 800px;"></div>
-								</header>
-								<div class="image main"><img src="images/cincinnati.jpg" alt="" /></div>
-							</section>
+						<section class="post">
+							<header class="major">
+								<h1>Resume</h1>
+								<p>Below you'll find my resume which should present a brief summary of my knowledge, skills, and experience.
+								I offer industrial-organizational expertise, a strong aptitude for learning new concepts and technologies, and a proven track record of exceptional performance.
+								I believe that my knowledge as an I/O psychologist and my passion for understanding human behavior makes me the ideal candidate to meet your organizational needs. Thank you for your time and interest.</p>
+							</header>
+							<div id="iframeContainer">
+							</div>
+						</section>
 					</div>
 				<!-- Footer -->
 					<footer id="footer">
 						</section>
 						<section class="split contact">
-							<section class="alt">
-							</section>
 							<section>
 								<h3>Email</h3>
 								<p><a href="#">johnnystaley.io@gmail.com</a></p>
@@ -65,7 +72,7 @@
 					</footer>
 				<!-- Copyright -->
 					<div id="copyright">
-						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+						<ul><li>&copy; johnnystaley.com </li><li>Design: <a href="https://github.com/johnnystaley">johnnystaley</a></li></ul>
 					</div>
 			</div>
 		<!-- Scripts -->
@@ -76,17 +83,6 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<script src="https://documentservices.adobe.com/view-sdk/viewer.js"></script>
-		<!--Adobe Script causing issues-->	
-			<script type="text/javascript">
-				document.addEventListener("adobe_dc_view_sdk.ready", function(){ 
-					var adobeDCView = new AdobeDC.View({clientId: "bc1qre8jdw2azrg6tf49wmp652w00xltddxmpk98xp", divId: "adobe-dc-view"});
-					adobeDCView.previewFile({
-						content:{location: {url: "https://johnnystaley.com/images/resume.pdf"}},
-						metaData:{fileName: "resume.pdf"}
-					}, {embedMode: "IN_LINE"});
-				});
-			</script>
 			<script type="module">
 				// Import the functions you need from the SDKs you need
 				import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
@@ -108,5 +104,28 @@
 				const app = initializeApp(firebaseConfig);
 				const analytics = getAnalytics(app);
 			  </script>
+			  <script>
+				var URL = "https://docs.google.com/viewer?url=https://johnnystaley.com/images/resume.pdf&embedded=true";
+				var count = 0;
+					var iframe =  `<iframe id = "myIframe" src = "${URL}" style = "width:100%; height:1000px;"  frameborder = "0"></iframe>`;
+			
+				   $('#iframeContainer').html(iframe);
+						$('#myIframe').on('load', function(){ 
+						count++;
+						if(count>0){
+							clearInterval(ref)
+						}
+					});
+			
+					var ref = setInterval(()=>{
+					$('#iframeContainer').html(iframe);
+					$('#myIframe').on('load', function() {
+						count++;
+						if (count > 0) {
+							clearInterval(ref)
+						}
+					});
+				}, 4000)
+			</script> 
 	</body>
 </html>
