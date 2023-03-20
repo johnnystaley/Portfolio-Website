@@ -57,6 +57,18 @@
 							background-color: transparentize(_palette(invert, fg), 0.9);
 						}
 					}
+					
+					&.dropdown{
+						background-color: _palette(invert, fg);
+
+						a {
+							color: _palette(invert, bg);
+
+							&:hover {
+								color: _palette(invert, accent) !important;
+							}
+						}
+					}
 
 					&.active {
 						background-color: _palette(invert, fg);
